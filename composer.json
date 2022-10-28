@@ -1,0 +1,14 @@
+{
+    "name": "hexlet/code",
+    "description": "1st project",
+    "authors": [
+        {
+            "name": "210danila",
+            "email": "210danila@gmail.com"
+        }
+    ],
+    "bin": [
+        "bin/brain-games"
+    ],
+    "require": {}
+}
