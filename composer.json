@@ -6,9 +6,16 @@
             "name": "210danila",
             "email": "210danila@gmail.com"
         }
-    ],
+    ],    
+    "autoload": {
+        "files": [
+            "src/Cli.php"
+        ]
+    },
     "bin": [
         "bin/brain-games"
     ],
-    "require": {}
+    "require": {
+        "wp-cli/php-cli-tools": "*"
+    }
 }
