@@ -38,7 +38,7 @@ function hideSymbol(array $progression)
 }
 
 
-function runThreeProgressionsRounds(int $name)
+function runThreeProgressionsRounds(string $name)
 {
     for ($i = 0; $i < 3; $i++) {
         $progression = createProgression();
