@@ -8,3 +8,6 @@ https://asciinema.org/a/CAxBvLLfbKKkRSp79edd1LoCy
 
 Asciinema with brain-calc game
 https://asciinema.org/a/L9jOGhTvJI5oKMth8lsxJhPNl
+
+Asciinema with brain-progression game
+https://asciinema.org/a/C96RbIeCLnrs6utt06RF9bUWo
