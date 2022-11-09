@@ -3,6 +3,16 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/a571b8ff8ca4d589567a/maintainability)](https://codeclimate.com/github/210danila/php-project-45/maintainability)
 
+5 brain games right in console.
+
+Requirements:
+    - PHP >= 5.3
+    - wp-cli/php-cli-tools
+
+Instruction:
+    1) make install
+    2) make brain-<game_name> - run game
+
 Asciinema with brain-even game
 https://asciinema.org/a/CAxBvLLfbKKkRSp79edd1LoCy
 
