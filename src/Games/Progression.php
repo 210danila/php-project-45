@@ -30,14 +30,15 @@ function hideSymbol($progression)
     $progression[$randSymbolIndex] = '..';
 
     $formattedProgression = ''; # string version of progression
-    foreach ($progression as $element)
+    foreach ($progression as $element) {
         $formattedProgression .= $element . ' ';
+    }
 
     return [$formattedProgression, $answer];
 }
 
 
-function runThreeProgressions($name)
+function runThreeProgressionsRounds($name)
 {
     for ($i = 0; $i < 3; $i++) {
         $progression = createProgression();
@@ -53,8 +54,8 @@ function startProgressionGame()
 {
     $name = greetUser();
     line("What number is missing in the progression?");
-    
-    runThreeProgressions($name);
+
+    runThreeProgressionsRounds($name);
     endGameWithSuccess($name);
     return;
 }

@@ -11,3 +11,6 @@ https://asciinema.org/a/L9jOGhTvJI5oKMth8lsxJhPNl
 
 Asciinema with brain-progression game
 https://asciinema.org/a/C96RbIeCLnrs6utt06RF9bUWo
+
+Asciinema with brain-prime:
+https://asciinema.org/a/0SOYPanJd8FqIzGQpLXr2XgOn
