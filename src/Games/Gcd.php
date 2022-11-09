@@ -7,7 +7,7 @@ use function BrainGames\Engine\greetUser;
 use function BrainGames\Engine\askQuestion;
 use function BrainGames\Engine\endGameWithSuccess;
 
-function findGcdOfTwoNums($num1, $num2)
+function findGcdOfTwoNums(int $num1, int $num2)
 {
     $gcd = 0;
 

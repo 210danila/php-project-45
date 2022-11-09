@@ -7,7 +7,7 @@ use function BrainGames\Engine\greetUser;
 use function BrainGames\Engine\askQuestion;
 use function BrainGames\Engine\endGameWithSuccess;
 
-function isPrime($num)
+function isPrime(int $num)
 {
     for ($divider = 2; $divider <= ceil(sqrt($num)); $divider++) {
         if ($num % $divider == 0) {
@@ -18,7 +18,7 @@ function isPrime($num)
 }
 
 
-function runThreePrimeRounds($name)
+function runThreePrimeRounds(int $name)
 {
     for ($i = 0; $i < 3; $i++) {
         $num = rand(2, 199);

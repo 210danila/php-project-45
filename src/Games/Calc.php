@@ -8,7 +8,7 @@ use function BrainGames\Engine\greetUser;
 use function BrainGames\Engine\endGameWithSuccess;
 use function BrainGames\Engine\askQuestion;
 
-function countExpression($num1, $num2, $operation)
+function countExpression(int $num1, int $num2, string $operation)
 {
     if ($operation == '-') {
         return $num1 - $num2;

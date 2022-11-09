@@ -14,11 +14,11 @@ function greetUser()
 }
 
 
-function askQuestion($question, $correctAnswer, $name)
+function askQuestion(string $question, string $correctAnswer, string $name)
 {
     line("Question: %s", $question);
     $userAnswer = prompt("Your answer");
-    if (((string) $userAnswer) === ((string) $correctAnswer)) {
+    if ($userAnswer === $correctAnswer) {
         line("Correct!");
     } else {
         line("'%s' is wrong answer ;(. Correct answer was '%s'.", $userAnswer, $correctAnswer);
@@ -28,7 +28,7 @@ function askQuestion($question, $correctAnswer, $name)
 }
 
 
-function endGameWithSuccess($name) # if all answers were correct
+function endGameWithSuccess(string $name) # if all answers were correct
 {
     line("Congratulations, %s!", $name);
 }

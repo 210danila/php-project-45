@@ -23,7 +23,7 @@ function createProgression()
 }
 
 
-function hideSymbol($progression)
+function hideSymbol(array $progression)
 {
     $randSymbolIndex = rand(0, count($progression) - 1);
     $answer = $progression[$randSymbolIndex];
@@ -38,7 +38,7 @@ function hideSymbol($progression)
 }
 
 
-function runThreeProgressionsRounds($name)
+function runThreeProgressionsRounds(int $name)
 {
     for ($i = 0; $i < 3; $i++) {
         $progression = createProgression();
