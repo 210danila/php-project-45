@@ -18,7 +18,7 @@ function isPrime(int $num)
 }
 
 
-function runThreePrimeRounds(int $name)
+function runThreePrimeRounds(string $name)
 {
     for ($i = 0; $i < 3; $i++) {
         $num = rand(2, 199);
