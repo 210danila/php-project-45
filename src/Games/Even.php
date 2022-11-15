@@ -5,17 +5,16 @@ namespace BrainGames\Games\Even;
 use function cli\line;
 use function cli\prompt;
 use function BrainGames\Engine\greetUser;
-use function BrainGames\Engine\endGameWithSuccess;
 use function BrainGames\Engine\askQuestion;
+use function BrainGames\Engine\startGame;
 
 function startEvenGame()
 {
     $name = greetUser();
-    line("Answer \"yes\" if the number is even, otherwise answer \"no\".");
+    $gameDescription = "Answer \"yes\" if the number is even, otherwise answer \"no\".";
+    $questionsAndAnswers = [['15', 'no'],
+        ['6', 'yes'],
+        ['7', 'no']];
 
-    askQuestion('15', 'no', $name);
-    askQuestion('6', 'yes', $name);
-    askQuestion('7', 'no', $name);
-
-    endGameWithSuccess($name);
+    startGame($gameDescription, $questionsAndAnswers, $name);
 }

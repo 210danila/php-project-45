@@ -6,7 +6,7 @@ use function cli\line;
 use function cli\prompt;
 use function BrainGames\Engine\greetUser;
 use function BrainGames\Engine\askQuestion;
-use function BrainGames\Engine\endGameWithSuccess;
+use function BrainGames\Engine\startGame;
 
 function createProgression()
 {
@@ -31,31 +31,30 @@ function hideSymbol(array $progression)
 
     $formattedProgression = ''; # string version of progression
     foreach ($progression as $element) {
-        $formattedProgression .= $element . ' ';
+        $formattedProgression .= (string) $element . ' ';
     }
 
     return [$formattedProgression, $answer];
 }
 
 
-function runThreeProgressionsRounds(string $name)
+function createThreeProgressions()
 {
+    $questionsAndAnswers = [];
     for ($i = 0; $i < 3; $i++) {
         $progression = createProgression();
-        [$formattedProgression, $answer] = hideSymbol($progression);
-
-        askQuestion($formattedProgression, $answer, $name);
+        $questionsAndAnswers[] = hideSymbol($progression);
     }
-    return ;
+    return $questionsAndAnswers;
 }
 
 
 function startProgressionGame()
 {
     $name = greetUser();
-    line("What number is missing in the progression?");
-
-    runThreeProgressionsRounds($name);
-    endGameWithSuccess($name);
-    return;
+    $gameDescription = "What number is missing in the progression?";
+    $questionsAndAnswers = createThreeProgressions();
+    
+    startGame($gameDescription, $questionsAndAnswers, $name);
+    return ;
 }

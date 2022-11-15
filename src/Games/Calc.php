@@ -5,17 +5,20 @@ namespace BrainGames\Games\Calc;
 use function cli\line;
 use function cli\prompt;
 use function BrainGames\Engine\greetUser;
-use function BrainGames\Engine\endGameWithSuccess;
 use function BrainGames\Engine\askQuestion;
+use function BrainGames\Engine\startGame;
 
 function countExpression(int $num1, int $num2, string $operation)
 {
-    if ($operation == '-') {
-        return $num1 - $num2;
-    } elseif ($operation == '+') {
-        return $num1 + $num2;
-    } elseif ($operation == '*') {
-        return $num1 * $num2;
+    switch ($operation) {
+        case '-':
+            return $num1 - $num2;
+        case '+':
+            return $num1 + $num2;
+        case '*':
+            return $num1 * $num2;
+        /* ситуации, когда ни один оператор не подошел сложиться не может
+        поскольку operation выбирается из 3 доступных вариантов*/
     }
 }
 
@@ -35,16 +38,10 @@ function makeExpression()
 function startCalcGame()
 {
     $name = greetUser();
-    line('What is the result of the expression?');
-    $expression = 0;
-    $result = 0;
-
-    [$expression, $result] = makeExpression();
-    askQuestion($expression, $result, $name);
-    [$expression, $result] = makeExpression();
-    askQuestion($expression, $result, $name);
-    [$expression, $result] = makeExpression();
-    askQuestion($expression, $result, $name);
-
-    endGameWithSuccess($name);
+    $gameDescription = 'What is the result of the expression?';
+    $expressionsAndResults = [makeExpression(),
+        makeExpression(),
+        makeExpression()];
+    
+    startGame($gameDescription, $expressionsAndResults, $name);
 }

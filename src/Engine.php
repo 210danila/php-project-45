@@ -8,7 +8,7 @@ use function cli\prompt;
 function greetUser()
 {
     line("Welcome to the Brain Games!");
-    $name = prompt("May I have your name?");
+    $name = prompt("May I have your name? ", $default=false, $marker='');
     line("Hello, %s!", $name);
     return $name;
 }
@@ -18,17 +18,28 @@ function askQuestion(string $question, string $correctAnswer, string $name)
 {
     line("Question: %s", $question);
     $userAnswer = prompt("Your answer");
-    if ($userAnswer === $correctAnswer) {
-        line("Correct!");
-    } else {
+
+    if ($userAnswer !== $correctAnswer) {
         line("'%s' is wrong answer ;(. Correct answer was '%s'.", $userAnswer, $correctAnswer);
         line("Let's try again, %s!", $name);
-        exit();
+        return false;
     }
+    line("Correct!");
+    return true;
 }
 
 
-function endGameWithSuccess(string $name) # if all answers were correct
+function startGame($gameDescription, $questionsAndAnswers, $name)
 {
+    line($gameDescription);
+    for ($i = 0; $i < 3; $i++) {
+        [$question, $answer] = $questionsAndAnswers[$i];
+        $isAnswerCorrect = askQuestion($question, $answer, $name);
+        if (!$isAnswerCorrect) {
+            return ;
+        }
+    }
     line("Congratulations, %s!", $name);
+    return ;
 }
+

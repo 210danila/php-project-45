@@ -5,7 +5,7 @@ namespace BrainGames\Games\Gcd;
 use function cli\line;
 use function BrainGames\Engine\greetUser;
 use function BrainGames\Engine\askQuestion;
-use function BrainGames\Engine\endGameWithSuccess;
+use function BrainGames\Engine\startGame;
 
 function findGcdOfTwoNums(int $num1, int $num2)
 {
@@ -32,18 +32,11 @@ function createPairOfNums()
 function startGcdGame() # greatest common divisor game
 {
     $name = greetUser();
-    line("Find the greatest common divisor of given numbers.");
+    $gameDescription = "Find the greatest common divisor of given numbers.";
 
-    $num1 = rand(1, 100);
-    $num2 = rand(1, 100);
-    $gcd = findGcdOfTwoNums($num1, $num2);
+    $questionsAndAnswers = [createPairOfNums(),
+        createPairOfNums(),
+        createPairOfNums()];
 
-    [$question, $correctAnswer] = createPairOfNums();
-    askQuestion($question, $correctAnswer, $name);
-    [$question, $correctAnswer] = createPairOfNums();
-    askQuestion($question, $correctAnswer, $name);
-    [$question, $correctAnswer] = createPairOfNums();
-    askQuestion($question, $correctAnswer, $name);
-
-    endGameWithSuccess($name);
+    startGame($gameDescription, $questionsAndAnswers, $name);
 }
