@@ -29,7 +29,7 @@ function askQuestion(string $question, string $correctAnswer, string $name)
 }
 
 
-function startGame(string $gameDescription, string $questionsAndAnswers, string $name)
+function startGame(string $gameDescription, array $questionsAndAnswers, string $name)
 {
     line($gameDescription);
     for ($i = 0; $i < 3; $i++) {
