@@ -8,7 +8,7 @@ use function cli\prompt;
 function greetUser()
 {
     line("Welcome to the Brain Games!");
-    $name = prompt("May I have your name? ", $default = false, $marker = '');
+    $name = prompt("May I have your name? ");
     line("Hello, %s!", $name);
     return $name;
 }
@@ -29,7 +29,7 @@ function askQuestion(string $question, string $correctAnswer, string $name)
 }
 
 
-function startGame($gameDescription, $questionsAndAnswers, $name)
+function startGame(string $gameDescription, string $questionsAndAnswers, string $name)
 {
     line($gameDescription);
     for ($i = 0; $i < 3; $i++) {
