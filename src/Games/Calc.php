@@ -17,8 +17,8 @@ function countExpression(int $num1, int $num2, string $operation)
             return $num1 + $num2;
         case '*':
             return $num1 * $num2;
-        /* ситуации, когда ни один оператор не подошел сложиться не может
-        поскольку operation выбирается из 3 доступных вариантов*/
+        default:
+            return ;
     }
 }
 
@@ -42,6 +42,6 @@ function startCalcGame()
     $expressionsAndResults = [makeExpression(),
         makeExpression(),
         makeExpression()];
-    
+
     startGame($gameDescription, $expressionsAndResults, $name);
 }

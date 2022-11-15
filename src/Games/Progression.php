@@ -54,7 +54,7 @@ function startProgressionGame()
     $name = greetUser();
     $gameDescription = "What number is missing in the progression?";
     $questionsAndAnswers = createThreeProgressions();
-    
+
     startGame($gameDescription, $questionsAndAnswers, $name);
     return ;
 }

@@ -8,7 +8,7 @@ use function cli\prompt;
 function greetUser()
 {
     line("Welcome to the Brain Games!");
-    $name = prompt("May I have your name? ", $default=false, $marker='');
+    $name = prompt("May I have your name? ", $default = false, $marker = '');
     line("Hello, %s!", $name);
     return $name;
 }
@@ -42,4 +42,3 @@ function startGame($gameDescription, $questionsAndAnswers, $name)
     line("Congratulations, %s!", $name);
     return ;
 }
-

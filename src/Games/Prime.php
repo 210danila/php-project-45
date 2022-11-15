@@ -21,7 +21,7 @@ function isPrime(int $num)
 function createThreePrimeNums()
 {
     $questionsAndAnswers = [];
-     for ($i = 0; $i < 3; $i++) {
+    for ($i = 0; $i < 3; $i++) {
         $num = rand(2, 199);
         if (isPrime($num)) {
             $questionsAndAnswers[] = [(string) $num, 'yes'];
