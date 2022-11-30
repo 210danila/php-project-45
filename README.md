@@ -14,13 +14,16 @@ Instruction:
     2) make brain-<game_name> - run game
 
 Asciinema with brain-even game
-https://asciinema.org/a/CAxBvLLfbKKkRSp79edd1LoCy
+https://asciinema.org/a/IZSiNqO1BQL3qEqUTqapHY5Zz
 
 Asciinema with brain-calc game
-https://asciinema.org/a/L9jOGhTvJI5oKMth8lsxJhPNl
+https://asciinema.org/a/0ec5gF3JcShzRdmf4qFTmfBrB
 
 Asciinema with brain-progression game
-https://asciinema.org/a/C96RbIeCLnrs6utt06RF9bUWo
+https://asciinema.org/a/a54u9ScE2ktKBs7iCJHENYFhG
+
+Asciinema with brain-gcd game
+https://asciinema.org/a/ZY9DS96J8oREEsoLltwR3cWsP
 
 Asciinema with brain-prime:
-https://asciinema.org/a/0SOYPanJd8FqIzGQpLXr2XgOn
+https://asciinema.org/a/cl0sVR23u2auJ0eHJ0bVa5YEh

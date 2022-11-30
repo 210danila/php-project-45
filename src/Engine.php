@@ -29,10 +29,13 @@ function askQuestion(string $question, string $correctAnswer, string $name)
 }
 
 
-function startGame(string $gameDescription, array $questionsAndAnswers, string $name)
+function startGame(string $gameDescription, array $questionsAndAnswers)
 {
+    $name = greetUser();
     line($gameDescription);
-    for ($i = 0; $i < 3; $i++) {
+
+    $countOfRounds = 3;
+    for ($i = 0; $i < $countOfRounds; $i++) {
         [$question, $answer] = $questionsAndAnswers[$i];
         $isAnswerCorrect = askQuestion($question, $answer, $name);
         if (!$isAnswerCorrect) {

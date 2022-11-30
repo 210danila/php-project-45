@@ -4,8 +4,6 @@ namespace BrainGames\Games\Progression;
 
 use function cli\line;
 use function cli\prompt;
-use function BrainGames\Engine\greetUser;
-use function BrainGames\Engine\askQuestion;
 use function BrainGames\Engine\startGame;
 
 function createProgression()
@@ -51,10 +49,9 @@ function createThreeProgressions()
 
 function startProgressionGame()
 {
-    $name = greetUser();
     $gameDescription = "What number is missing in the progression?";
     $questionsAndAnswers = createThreeProgressions();
 
-    startGame($gameDescription, $questionsAndAnswers, $name);
+    startGame($gameDescription, $questionsAndAnswers);
     return ;
 }

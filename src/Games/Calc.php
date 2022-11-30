@@ -4,8 +4,6 @@ namespace BrainGames\Games\Calc;
 
 use function cli\line;
 use function cli\prompt;
-use function BrainGames\Engine\greetUser;
-use function BrainGames\Engine\askQuestion;
 use function BrainGames\Engine\startGame;
 
 function countExpression(int $num1, int $num2, string $operation)
@@ -18,7 +16,8 @@ function countExpression(int $num1, int $num2, string $operation)
         case '*':
             return $num1 * $num2;
         default:
-            return ;
+            $errorMessage = 'No case for current operand :(';
+            throw new Exception($errorMessage);
     }
 }
 
@@ -37,11 +36,12 @@ function makeExpression()
 
 function startCalcGame()
 {
-    $name = greetUser();
     $gameDescription = 'What is the result of the expression?';
-    $expressionsAndResults = [makeExpression(),
-        makeExpression(),
-        makeExpression()];
+    $expressionsAndResults = [];
+    $countOfRounds = 3;
+    for ($i = 0; $i < $countOfRounds; $i++) {
+        $expressionsAndResults[] = makeExpression();
+    }
 
-    startGame($gameDescription, $expressionsAndResults, $name);
+    startGame($gameDescription, $expressionsAndResults);
 }

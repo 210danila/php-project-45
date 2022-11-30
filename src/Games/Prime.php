@@ -3,8 +3,6 @@
 namespace BrainGames\Games\Prime;
 
 use function cli\line;
-use function BrainGames\Engine\greetUser;
-use function BrainGames\Engine\askQuestion;
 use function BrainGames\Engine\startGame;
 
 function isPrime(int $num)
@@ -36,10 +34,9 @@ function createThreePrimeNums()
 
 function startPrimeGame()
 {
-    $name = greetUser();
     $gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     $questionsAndAnswers = createThreePrimeNums();
 
-    startGame($gameDescription, $questionsAndAnswers, $name);
+    startGame($gameDescription, $questionsAndAnswers);
     return ;
 }
