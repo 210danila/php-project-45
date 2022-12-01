@@ -17,7 +17,7 @@ function countExpression(int $num1, int $num2, string $operation)
             return $num1 * $num2;
         default:
             $errorMessage = 'No case for current operand :(';
-            throw new Exception($errorMessage);
+            throw new \Exception($errorMessage);
     }
 }
 
