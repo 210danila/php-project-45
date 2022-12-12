@@ -5,6 +5,7 @@ namespace BrainGames\Games\Calc;
 use function cli\line;
 use function cli\prompt;
 use function BrainGames\Engine\startGame;
+use function BrainGames\Engine\getRoundsCount;
 
 function countExpression(int $num1, int $num2, string $operation)
 {
@@ -28,7 +29,7 @@ function makeExpression()
     $operation = $operations[rand(0, 2)];
     $num1 = rand(1, 100);
     $num2 = rand(1, 100);
-    $expression = ((string) $num1) . " {$operation} " . ((string) $num2);
+    $expression = ($num1) . " {$operation} " . ($num2);
     $result = ((string) countExpression($num1, $num2, $operation));
     return [$expression, $result];
 }
@@ -38,8 +39,7 @@ function startCalcGame()
 {
     $gameDescription = 'What is the result of the expression?';
     $expressionsAndResults = [];
-    $countOfRounds = 3;
-    for ($i = 0; $i < $countOfRounds; $i++) {
+    for ($i = 0; $i < getRoundsCount(); $i++) {
         $expressionsAndResults[] = makeExpression();
     }
 

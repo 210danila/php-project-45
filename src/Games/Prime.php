@@ -4,6 +4,7 @@ namespace BrainGames\Games\Prime;
 
 use function cli\line;
 use function BrainGames\Engine\startGame;
+use function BrainGames\Engine\getRoundsCount;
 
 function isPrime(int $num)
 {
@@ -19,7 +20,7 @@ function isPrime(int $num)
 function createThreePrimeNums()
 {
     $questionsAndAnswers = [];
-    for ($i = 0; $i < 3; $i++) {
+    for ($i = 0; $i < getRoundsCount(); $i++) {
         $num = rand(2, 199);
         if (isPrime($num)) {
             $questionsAndAnswers[] = [(string) $num, 'yes'];

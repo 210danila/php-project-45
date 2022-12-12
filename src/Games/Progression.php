@@ -5,6 +5,7 @@ namespace BrainGames\Games\Progression;
 use function cli\line;
 use function cli\prompt;
 use function BrainGames\Engine\startGame;
+use function BrainGames\Engine\getRoundsCount;
 
 function createProgression()
 {
@@ -39,7 +40,7 @@ function hideSymbol(array $progression)
 function createThreeProgressions()
 {
     $questionsAndAnswers = [];
-    for ($i = 0; $i < 3; $i++) {
+    for ($i = 0; $i < getRoundsCount(); $i++) {
         $progression = createProgression();
         $questionsAndAnswers[] = hideSymbol($progression);
     }
