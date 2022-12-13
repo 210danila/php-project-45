@@ -5,6 +5,7 @@ namespace BrainGames\Games\Progression;
 use function cli\line;
 use function cli\prompt;
 use function BrainGames\Engine\startGame;
+
 use const BrainGames\Engine\ROUNDSCOUNT;
 
 function createProgression()

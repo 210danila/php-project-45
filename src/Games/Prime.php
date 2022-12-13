@@ -4,6 +4,7 @@ namespace BrainGames\Games\Prime;
 
 use function cli\line;
 use function BrainGames\Engine\startGame;
+
 use const BrainGames\Engine\ROUNDSCOUNT;
 
 function isPrime(int $num)

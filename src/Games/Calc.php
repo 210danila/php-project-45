@@ -5,6 +5,7 @@ namespace BrainGames\Games\Calc;
 use function cli\line;
 use function cli\prompt;
 use function BrainGames\Engine\startGame;
+
 use const BrainGames\Engine\ROUNDSCOUNT;
 
 function countExpression(int $num1, int $num2, string $operation)

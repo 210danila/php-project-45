@@ -4,6 +4,7 @@ namespace BrainGames\Games\Gcd;
 
 use function cli\line;
 use function BrainGames\Engine\startGame;
+
 use const BrainGames\Engine\ROUNDSCOUNT;
 
 function findGcdOfTwoNums(int $num1, int $num2)
