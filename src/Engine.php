@@ -5,6 +5,8 @@ namespace BrainGames\Engine;
 use function cli\line;
 use function cli\prompt;
 
+const ROUNDSCOUNT = 3;
+
 function getRoundsCount()
 {
     $roundsCount = 3;

@@ -5,7 +5,7 @@ namespace BrainGames\Games\Calc;
 use function cli\line;
 use function cli\prompt;
 use function BrainGames\Engine\startGame;
-use function BrainGames\Engine\getRoundsCount;
+use const BrainGames\Engine\ROUNDSCOUNT;
 
 function countExpression(int $num1, int $num2, string $operation)
 {
@@ -39,7 +39,7 @@ function startCalcGame()
 {
     $gameDescription = 'What is the result of the expression?';
     $expressionsAndResults = [];
-    for ($i = 0; $i < getRoundsCount(); $i++) {
+    for ($i = 0; $i < ROUNDSCOUNT; $i++) {
         $expressionsAndResults[] = makeExpression();
     }
 
