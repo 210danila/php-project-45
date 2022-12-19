@@ -36,7 +36,7 @@ function makeExpression()
 }
 
 
-function startCalcGame()
+function startNewGame()
 {
     $gameDescription = 'What is the result of the expression?';
     $expressionsAndResults = [];

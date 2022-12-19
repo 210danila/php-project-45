@@ -11,19 +11,15 @@ function makeQuestionsAndAnswers()
     $questionsAndAnswers = [];
     for ($i = 0; $i < \BrainGames\Engine\ROUNDSCOUNT; $i++) {
         $num = rand(0, 100);
-        if ($num % 2 === 0) {
-            $questionsAndAnswers[] = [$num, 'yes'];
-        } else {
-            $questionsAndAnswers[] = [$num, 'no'];
-        }
+        $questionsAndAnswers[] = $num % 2 === 0 ? [$num, 'yes'] : [$num, 'no'];
     }
     return $questionsAndAnswers;
 }
 
 
-function startEvenGame()
+function startNewGame()
 {
-    $gameDescription = "Answer \"yes\" if the number is even, otherwise answer \"no\".";
+    $gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
 
     startGame($gameDescription, makeQuestionsAndAnswers());
 }

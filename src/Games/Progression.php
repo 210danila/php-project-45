@@ -49,7 +49,7 @@ function createProgressions()
 }
 
 
-function startProgressionGame()
+function startNewGame()
 {
     $gameDescription = "What number is missing in the progression?";
     $questionsAndAnswers = createProgressions();

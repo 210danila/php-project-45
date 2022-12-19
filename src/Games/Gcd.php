@@ -28,7 +28,7 @@ function createPairOfNums()
 }
 
 
-function startGcdGame() # greatest common divisor game
+function startNewGame()
 {
     $gameDescription = "Find the greatest common divisor of given numbers.";
 
