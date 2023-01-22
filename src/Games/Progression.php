@@ -12,16 +12,15 @@ function createProgression()
 {
     $progression = [];
     $firstNum = rand(3, 100);
-    $increase = rand(3, 10);
+    $stepOfProgression = rand(3, 10);
     $length = rand(5, 15);
     for ($i = 0; $i < $length; $i++) {
-        $currentNum = $firstNum + $i * $increase;
+        $currentNum = $firstNum + $i * $stepOfProgression;
         $progression[$i] = $currentNum;
     }
 
     return $progression;
 }
-
 
 function hideSymbol(array $progression)
 {
@@ -34,25 +33,19 @@ function hideSymbol(array $progression)
         $formattedProgression .= $element . ' ';
     }
 
-    return [$formattedProgression, (string) $answer];
+    return [$formattedProgression, $answer];
 }
-
-
-function createProgressions()
-{
-    $questionsAndAnswers = [];
-    for ($i = 0; $i < ROUNDSCOUNT; $i++) {
-        $progression = createProgression();
-        $questionsAndAnswers[] = hideSymbol($progression);
-    }
-    return $questionsAndAnswers;
-}
-
 
 function startNewGame()
 {
-    $gameDescription = "What number is missing in the progression?";
-    $questionsAndAnswers = createProgressions();
+    $gameDescription = 'What number is missing in the progression?';
+    $questionsAndAnswers = [];
+    $answerId = 1;
+    for ($i = 0; $i < ROUNDSCOUNT; $i++) {
+        $progression = createProgression();
+        $questionsAndAnswers[] = hideSymbol($progression);
+        $questionsAndAnswers[$i][$answerId] = (string) $questionsAndAnswers[$i][$answerId];
+    }
 
     startGame($gameDescription, $questionsAndAnswers);
     return ;

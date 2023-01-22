@@ -8,7 +8,7 @@ use function BrainGames\Engine\startGame;
 
 use const BrainGames\Engine\ROUNDSCOUNT;
 
-function countExpression(int $num1, int $num2, string $operation)
+function calculateExpression(int $num1, int $num2, string $operation)
 {
     switch ($operation) {
         case '-':
@@ -23,7 +23,6 @@ function countExpression(int $num1, int $num2, string $operation)
     }
 }
 
-
 function makeExpression()
 {
     $operations = ['+', '*', '-'];
@@ -31,17 +30,18 @@ function makeExpression()
     $num1 = rand(1, 100);
     $num2 = rand(1, 100);
     $expression = ($num1) . " {$operation} " . ($num2);
-    $result = ((string) countExpression($num1, $num2, $operation));
+    $result = calculateExpression($num1, $num2, $operation);
     return [$expression, $result];
 }
-
 
 function startNewGame()
 {
     $gameDescription = 'What is the result of the expression?';
     $expressionsAndResults = [];
+    $resultId = 1;
     for ($i = 0; $i < ROUNDSCOUNT; $i++) {
         $expressionsAndResults[] = makeExpression();
+        $expressionsAndResults[$i][$resultId] = (string) $expressionsAndResults[$i][$resultId];
     }
 
     startGame($gameDescription, $expressionsAndResults);

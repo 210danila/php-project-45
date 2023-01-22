@@ -20,9 +20,9 @@ function isPrime(int $num)
     return true;
 }
 
-
-function makeQuestionsAndAnswers()
+function startNewGame()
 {
+    $gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     $questionsAndAnswers = [];
     for ($i = 0; $i < ROUNDSCOUNT; $i++) {
         $num = rand(2, 199);
@@ -33,15 +33,5 @@ function makeQuestionsAndAnswers()
         }
     }
 
-    return $questionsAndAnswers;
-}
-
-
-function startNewGame()
-{
-    $gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-    $questionsAndAnswers = makeQuestionsAndAnswers();
-
     startGame($gameDescription, $questionsAndAnswers);
-    return ;
 }

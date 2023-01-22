@@ -18,23 +18,16 @@ function findGcdOfTwoNums(int $num1, int $num2)
     return $gcd;
 }
 
-
-function createPairOfNums()
-{
-    $num1 = rand(1, 100);
-    $num2 = rand(1, 100);
-    $gcd = (string) findGcdOfTwoNums($num1, $num2);
-    return ["{$num1} {$num2}", $gcd];
-}
-
-
 function startNewGame()
 {
-    $gameDescription = "Find the greatest common divisor of given numbers.";
-
+    $gameDescription = 'Find the greatest common divisor of given numbers.';
     $questionsAndAnswers = [];
     for ($i = 0; $i < ROUNDSCOUNT; $i++) {
-        $questionsAndAnswers[] = createPairOfNums();
+        $num1 = rand(1, 100);
+        $num2 = rand(1, 100);
+        $gcd = findGcdOfTwoNums($num1, $num2);
+
+        $questionsAndAnswers[] = ["{$num1} {$num2}", (string) $gcd];
     }
 
     startGame($gameDescription, $questionsAndAnswers);
