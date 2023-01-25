@@ -6,7 +6,9 @@ use function cli\line;
 use function cli\prompt;
 use function BrainGames\Engine\startGame;
 
-use const BrainGames\Engine\ROUNDSCOUNT;
+use const BrainGames\Engine\ROUNDS_COUNT;
+
+const GAME_DESCRIPTION = 'What number is missing in the progression?';
 
 function createProgression()
 {
@@ -36,17 +38,15 @@ function hideSymbol(array $progression)
     return [$formattedProgression, $answer];
 }
 
-function startNewGame()
+function startNewProgressionGame()
 {
-    $gameDescription = 'What number is missing in the progression?';
     $questionsAndAnswers = [];
-    $answerId = 1;
-    for ($i = 0; $i < ROUNDSCOUNT; $i++) {
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $progression = createProgression();
         $questionsAndAnswers[] = hideSymbol($progression);
-        $questionsAndAnswers[$i][$answerId] = (string) $questionsAndAnswers[$i][$answerId];
+        $questionsAndAnswers[$i][1] = (string) $questionsAndAnswers[$i][1];
     }
 
-    startGame($gameDescription, $questionsAndAnswers);
+    startGame(GAME_DESCRIPTION, $questionsAndAnswers);
     return ;
 }

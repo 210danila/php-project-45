@@ -5,7 +5,9 @@ namespace BrainGames\Games\Prime;
 use function cli\line;
 use function BrainGames\Engine\startGame;
 
-use const BrainGames\Engine\ROUNDSCOUNT;
+use const BrainGames\Engine\ROUNDS_COUNT;
+
+const GAME_DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 function isPrime(int $num)
 {
@@ -20,11 +22,10 @@ function isPrime(int $num)
     return true;
 }
 
-function startNewGame()
+function startNewPrimeGame()
 {
-    $gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     $questionsAndAnswers = [];
-    for ($i = 0; $i < ROUNDSCOUNT; $i++) {
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $num = rand(2, 199);
         if (isPrime($num)) {
             $questionsAndAnswers[] = [(string) $num, 'yes'];
@@ -33,5 +34,5 @@ function startNewGame()
         }
     }
 
-    startGame($gameDescription, $questionsAndAnswers);
+    startGame(GAME_DESCRIPTION, $questionsAndAnswers);
 }

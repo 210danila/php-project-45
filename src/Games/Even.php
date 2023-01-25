@@ -6,16 +6,17 @@ use function cli\line;
 use function cli\prompt;
 use function BrainGames\Engine\startGame;
 
-use const BrainGames\Engine\ROUNDSCOUNT;
+use const BrainGames\Engine\ROUNDS_COUNT;
 
-function startNewGame()
+const GAME_DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
+
+function startNewEvenGame()
 {
-    $gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
     $questionsAndAnswers = [];
-    for ($i = 0; $i < ROUNDSCOUNT; $i++) {
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $num = rand(0, 100);
         $questionsAndAnswers[] = $num % 2 === 0 ? [$num, 'yes'] : [$num, 'no'];
     }
 
-    startGame($gameDescription, $questionsAndAnswers);
+    startGame(GAME_DESCRIPTION, $questionsAndAnswers);
 }

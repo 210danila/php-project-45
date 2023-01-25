@@ -3,27 +3,29 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/a571b8ff8ca4d589567a/maintainability)](https://codeclimate.com/github/210danila/php-project-45/maintainability)
 
-5 brain games right in console.
+**5 brain games right in console.**
 
 Requirements:
     - PHP >= 5.3
     - wp-cli/php-cli-tools
 
+```
 Instruction:
     1) make install
     2) make brain-<game_name> - run game
+```
 
-Asciinema with brain-even game
-https://asciinema.org/a/zrVkCHdzlgdEEdQtme9qMMhfB
+*Asciinema with brain-even game*
+[![asciicast](https://asciinema.org/a/zrVkCHdzlgdEEdQtme9qMMhfB.svg)](https://asciinema.org/a/zrVkCHdzlgdEEdQtme9qMMhfB)
 
-Asciinema with brain-calc game
-https://asciinema.org/a/1KeGVAKRUsdB9yQoXgw2cDwvf
+*Asciinema with brain-calc game*
+[![asciicast](https://asciinema.org/a/1KeGVAKRUsdB9yQoXgw2cDwvf.svg)](https://asciinema.org/a/1KeGVAKRUsdB9yQoXgw2cDwvf)
 
-Asciinema with brain-progression game
-https://asciinema.org/a/uu1H2zD9h3nEtqfUAviWqajQF
+*Asciinema with brain-progression game*
+[![asciicast](https://asciinema.org/a/uu1H2zD9h3nEtqfUAviWqajQF.svg)](https://asciinema.org/a/uu1H2zD9h3nEtqfUAviWqajQF)
 
-Asciinema with brain-gcd game
-https://asciinema.org/a/SEqBCmT5F7BurwPQgjS937gYe
+*Asciinema with brain-gcd game*
+[![asciicast](https://asciinema.org/a/SEqBCmT5F7BurwPQgjS937gYe.svg)](https://asciinema.org/a/SEqBCmT5F7BurwPQgjS937gYe)
 
-Asciinema with brain-prime:
-https://asciinema.org/a/DVrY6Q7T5ueZpZSlsdCRnzgwb
+*Asciinema with brain-prime:*
+[![asciicast](https://asciinema.org/a/DVrY6Q7T5ueZpZSlsdCRnzgwb.svg)](https://asciinema.org/a/DVrY6Q7T5ueZpZSlsdCRnzgwb)
