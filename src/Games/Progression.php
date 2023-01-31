@@ -44,7 +44,6 @@ function startNewProgressionGame()
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $progression = createProgression();
         $questionsAndAnswers[] = hideSymbol($progression);
-        $questionsAndAnswers[$i][1] = (string) $questionsAndAnswers[$i][1];
     }
 
     startGame(GAME_DESCRIPTION, $questionsAndAnswers);

@@ -28,7 +28,7 @@ function startNewGcdGame()
         $num2 = rand(1, 100);
         $gcd = findGcdOfTwoNums($num1, $num2);
 
-        $questionsAndAnswers[] = ["{$num1} {$num2}", (string) $gcd];
+        $questionsAndAnswers[] = ["{$num1} {$num2}", $gcd];
     }
 
     startGame(GAME_DESCRIPTION, $questionsAndAnswers);

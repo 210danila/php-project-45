@@ -27,11 +27,7 @@ function startNewPrimeGame()
     $questionsAndAnswers = [];
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $num = rand(2, 199);
-        if (isPrime($num)) {
-            $questionsAndAnswers[] = [(string) $num, 'yes'];
-        } else {
-            $questionsAndAnswers[] = [(string) $num, 'no'];
-        }
+        $questionsAndAnswers[] = isPrime($num) ? [$num, 'yes'] : [$num, 'no'];
     }
 
     startGame(GAME_DESCRIPTION, $questionsAndAnswers);

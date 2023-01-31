@@ -28,7 +28,7 @@ function calculateExpression(int $num1, int $num2, string $operation)
 function makeExpression()
 {
     $operations = ['+', '*', '-'];
-    $operation = $operations[rand(0, 2)];
+    $operation = $operations[array_rand($operations)];
     $num1 = rand(1, 100);
     $num2 = rand(1, 100);
     $expression = "{$num1} {$operation} {$num2}";
@@ -41,7 +41,6 @@ function startNewCalcGame()
     $expressionsAndResults = [];
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $expressionsAndResults[] = makeExpression();
-        $expressionsAndResults[$i][1] = (string) $expressionsAndResults[$i][1];
     }
 
     startGame(GAME_DESCRIPTION, $expressionsAndResults);
