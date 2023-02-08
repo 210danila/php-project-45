@@ -14,6 +14,7 @@ function isPrime(int $num)
     if ($num < 2) {
         return false;
     }
+
     for ($divider = 2; $divider <= ceil(sqrt($num)); $divider++) {
         if ($num % $divider == 0) {
             return false;
@@ -22,7 +23,7 @@ function isPrime(int $num)
     return true;
 }
 
-function startNewPrimeGame()
+function startNewGame()
 {
     $questionsAndAnswers = [];
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {

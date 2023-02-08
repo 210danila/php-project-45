@@ -36,7 +36,7 @@ function makeExpression()
     return [$expression, $result];
 }
 
-function startNewCalcGame()
+function startNewGame()
 {
     $expressionsAndResults = [];
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {

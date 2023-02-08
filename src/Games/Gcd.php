@@ -20,7 +20,7 @@ function findGcdOfTwoNums(int $num1, int $num2)
     return $gcd;
 }
 
-function startNewGcdGame()
+function startNewGame()
 {
     $questionsAndAnswers = [];
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {

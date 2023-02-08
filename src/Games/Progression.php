@@ -29,16 +29,11 @@ function hideSymbol(array $progression)
     $randSymbolIndex = rand(0, count($progression) - 1);
     $answer = $progression[$randSymbolIndex];
     $progression[$randSymbolIndex] = '..';
-
-    $formattedProgression = ''; # string version of progression
-    foreach ($progression as $element) {
-        $formattedProgression .= $element . ' ';
-    }
-
+    $formattedProgression = implode(' ', $progression);
     return [$formattedProgression, $answer];
 }
 
-function startNewProgressionGame()
+function startNewGame()
 {
     $questionsAndAnswers = [];
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
