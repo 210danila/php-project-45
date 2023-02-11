@@ -42,5 +42,4 @@ function startNewGame()
     }
 
     startGame(GAME_DESCRIPTION, $questionsAndAnswers);
-    return ;
 }
